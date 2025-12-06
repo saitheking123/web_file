@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Upload Successful</title>
+	<link rel="stylesheet" href="/static/css/styles.css">
+	<style>
+		.success-card { max-width: 420px; margin: 60px auto; text-align: center; padding: 24px; }
+		.success-icon { font-size: 48px; color: #28a745; margin-bottom: 10px; }
+		.file-link { word-break: break-all; font-size: 14px; color: #0056b3; }
+		.btn-secondary { background: #6c757d; }
+	</style>
+</head>
+<body class="bg-gradient-blue">
+	<div class="header">Upload Result</div>
+	<div class="container success-card form-container">
+		<div class="success-icon">&#10003;</div>
+		<h2>Thanks for your data</h2>
+		<p>Your file <strong>{{ filename }}</strong> was uploaded successfully.</p>
+		{% if file_url %}
+		<p class="file-link"><a href="{{ file_url }}" target="_blank" rel="noopener">Open uploaded file</a></p>
+		{% endif %}
+
+		<a href="/upload" class="btn" role="button">Click here to upload another</a>
+		<a href="/" class="btn btn-secondary" style="margin-top:10px;">Back to Home</a>
+
+		<div class="footer"> by Sai</div>
+	</div>
+</body>
+</html>
+

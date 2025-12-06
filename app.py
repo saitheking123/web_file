@@ -97,7 +97,9 @@ def upload():
             cursor.execute("INSERT INTO files (user_id,file_name,file_url) VALUES (%s,%s,%s)",
                         (session['user_id'], file.filename, file_url))
             db.commit()
-            return f"thank you and File uploaded successfully: <a href='{"/upload"}'>click here</a>"
+            cursor.close()
+            db.close()
+            return render_template('success_upload.html', filename=file.filename, file_url=file_url)
 
 
     return render_template('upload.html')
