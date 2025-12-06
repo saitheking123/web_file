@@ -1,0 +1,462 @@
+/* ==========================================
+   RESPONSIVE WEBSITE - Mobile First Design
+   =========================================== */
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* ==========================================
+   HEADER STYLES
+   =========================================== */
+.header {
+    background: #343a40;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    font-size: 18px;
+    word-wrap: break-word;
+}
+
+.header a {
+    color: #ffc107;
+    text-decoration: none;
+    margin-left: 10px;
+}
+
+.header a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   FOOTER STYLES
+   =========================================== */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #666;
+    padding: 10px;
+}
+
+/* ==========================================
+   CONTAINER STYLES - Mobile First
+   =========================================== */
+.container {
+    width: 100%;
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 15px;
+}
+
+/* ==========================================
+   FORM STYLES - Mobile Responsive
+   =========================================== */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-weight: 600;
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="file"],
+textarea,
+select {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Prevents iOS auto-zoom on focus */
+    font-family: inherit;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+/* ==========================================
+   BUTTON STYLES - Touch Friendly
+   =========================================== */
+button,
+.btn {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+    touch-action: manipulation;
+}
+
+button:active,
+.btn:active {
+    transform: scale(0.98);
+}
+
+button:hover,
+.btn:hover {
+    background: #0056b3;
+}
+
+button.register-btn {
+    background: #28a745;
+}
+
+button.register-btn:hover {
+    background: #1e7e34;
+}
+
+button.logout-btn {
+    background: #dc3545;
+}
+
+button.logout-btn:hover {
+    background: #c82333;
+}
+
+button.upload-btn {
+    background: #17a2b8;
+}
+
+button.upload-btn:hover {
+    background: #117a8b;
+}
+
+/* ==========================================
+   LINK STYLES
+   =========================================== */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================
+   TEXT STYLES
+   =========================================== */
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+h2 {
+    font-size: 22px;
+    text-align: center;
+}
+
+p {
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ==========================================
+   CARD LAYOUT - Home Page
+   =========================================== */
+.cards {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin: 20px 0;
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:active {
+    transform: scale(0.98);
+}
+
+.card a {
+    display: block;
+    text-decoration: none;
+    color: #007BFF;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* ==========================================
+   WELCOME SECTION
+   =========================================== */
+.welcome {
+    text-align: center;
+    margin: 20px 0;
+    color: #333;
+    font-size: 20px;
+}
+
+/* ==========================================
+   MESSAGE STYLES
+   =========================================== */
+.message {
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    font-size: 14px;
+}
+
+.error {
+    background: #f8d7da;
+    color: #721c24;
+    border-color: #f5c6cb;
+}
+
+/* ==========================================
+   BACKGROUND GRADIENTS
+   =========================================== */
+.bg-gradient-blue {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.bg-gradient-cyan {
+    background: linear-gradient(120deg, #89f7fe, #66a6ff);
+    min-height: 100vh;
+}
+
+/* ==========================================
+   LOGIN/REGISTER FORM CONTAINER
+   =========================================== */
+.form-container {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    padding: 20px;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h2 {
+    color: #333;
+    margin-bottom: 25px;
+}
+
+.form-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.form-link a {
+    color: #007BFF;
+    font-weight: 600;
+}
+
+/* ==========================================
+   RESPONSIVE BREAKPOINTS
+   =========================================== */
+
+/* Tablet (600px and up) */
+@media screen and (min-width: 600px) {
+    .container {
+        max-width: 600px;
+        padding: 20px;
+    }
+
+    .form-container {
+        max-width: 450px;
+        padding: 30px;
+    }
+
+    .cards {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .card {
+        width: 45%;
+        min-width: 200px;
+        padding: 25px;
+    }
+
+    h2 {
+        font-size: 26px;
+    }
+
+    .welcome {
+        font-size: 24px;
+    }
+
+    button,
+    .btn {
+        margin-bottom: 15px;
+    }
+}
+
+/* Large Tablet / Desktop (768px and up) */
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 750px;
+        padding: 30px;
+    }
+
+    .form-container {
+        max-width: 500px;
+        padding: 40px;
+    }
+
+    .cards {
+        gap: 25px;
+    }
+
+    .card {
+        width: auto;
+        flex: 0 0 auto;
+        min-width: 220px;
+        padding: 30px;
+    }
+
+    h2 {
+        font-size: 28px;
+    }
+
+    .header {
+        padding: 20px;
+        font-size: 20px;
+    }
+}
+
+/* Large Desktop (1024px and up) */
+@media screen and (min-width: 1024px) {
+    .container {
+        max-width: 1000px;
+        padding: 40px;
+    }
+
+    .form-container {
+        max-width: 550px;
+    }
+
+    .cards {
+        gap: 30px;
+        justify-content: center;
+    }
+
+    .card {
+        width: 250px;
+        padding: 35px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    .welcome {
+        font-size: 28px;
+        margin: 40px 0;
+    }
+
+    button,
+    .btn {
+        padding: 14px;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    textarea,
+    select {
+        padding: 14px;
+    }
+}
+
+/* ==========================================
+   UTILITY CLASSES
+   =========================================== */
+.text-center {
+    text-align: center;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.pt-20 {
+    padding-top: 20px;
+}
+
+.pb-20 {
+    padding-bottom: 20px;
+}
+
+/* ==========================================
+   ACCESSIBILITY
+   =========================================== */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: more) {
+    input[type="text"],
+    input[type="email"],
+    input[type="password"],
+    input[type="file"],
+    textarea,
+    select {
+        border-width: 2px;
+    }
+
+    button,
+    .btn {
+        border: 2px solid currentColor;
+    }
+}
